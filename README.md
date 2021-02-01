@@ -112,13 +112,11 @@ filtering algorithm
 
 12. To execute the code -
 For Data Prep-
- `extract_city_ratings.py` -> `extract_matrix_index.py` -> `concat_reviews.py` -> `dump_bag_of_words.py`
- -> `dump_user_preference.py` 
+ `extract_city_ratings.py` <City Name> -> `extract_matrix_index.py` <City Name> -> `concat_reviews.py` <City Name> -> `dump_bag_of_words.py` <City Name> -> `dump_user_preference.py` <City Name>
 
  For Model Training -
- `Data Prep` --> `text_based_recommendation.py`
-            |--> `memory_based_cf.py`
+ `Data Prep` --> `text_based_recommendation.py` <City Name>
+ `Data Prep` --> --> `memory_based_cf.py` <City Name>
 
 For Model Scoring & getting top 20 recommendations per user (done only for CF algo as it was the best performing one)
-`pred_cf_recommend.py` 
- 
+`pred_cf_recommend.py` <City Name>
